@@ -2,8 +2,7 @@
 session_start();
 require_once 'credentials.php';
 $message = '';
-if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-	
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {	
 	//Check if we have the submited username with the submited password
 	foreach ( $users as $user ) {
 		if ( $user['username'] == $_POST['username'] && $user['password'] == $_POST['password'] ) {
@@ -13,10 +12,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	if ( !array_key_exists('username', $_SESSION) ) {
 		$message = 'Invalid username or password !';
 	} else {
-		header('Location: dashboard.html');
+		header('Location: dashboard.php');
 		exit();
 	}
-
 }
 ?>
 <html>
