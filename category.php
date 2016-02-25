@@ -123,3 +123,6 @@ include 'includes/nav.php';
 
         </div>
         <!-- /#wrapper -->
+<?php 
+include 'includes/footer.php';
+?>
